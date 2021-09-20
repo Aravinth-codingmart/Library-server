@@ -11,9 +11,6 @@ app.use(cors());
 
 //connect to mlab database
 mongoose.connect("mongodb+srv://Aravinth:arav1234@cluster0.anale.mongodb.net/test?retryWrites=true&w=majority");
-mongoose.connection.once("open", () => {
-    console.log("connected to database");
-});
 
 app.use("/graphql", graphqlHTTP({
     schema: Schema,
